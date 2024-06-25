@@ -1,6 +1,6 @@
 ## Todolist 📝
 
-Aplikasi To-Do List sederhana yang memungkinkan pengguna untuk mencatat dan mengelola daftar tugas atau catatan sehari-hari. Dengan antarmuka yang bersih dan minimalis, pengguna dapat dengan mudah menambahkan, mengedit, dan menghapus. Aplikasi ini juga mendukung penggunaan offline melalui penggunaan Progressive Web App (PWA), sehingga dapat di install melalui perangkat smartphone, desktop, kapan saja, bahkan tanpa koneksi internet.
+Aplikasi To-Do List sederhana yang memungkinkan pengguna untuk mencatat dan mengelola daftar tugas atau catatan sehari-hari. Dengan antarmuka yang bersih dan minimalis, pengguna dapat dengan mudah menambahkan dan menghapus. Aplikasi ini juga mendukung penggunaan offline melalui penggunaan Progressive Web App (PWA), sehingga dapat di install melalui perangkat smartphone, desktop, kapan saja, bahkan tanpa koneksi internet.
 
 ## Screenshot
 
