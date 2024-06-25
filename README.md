@@ -8,4 +8,4 @@ Aplikasi To-Do List sederhana yang memungkinkan pengguna untuk mencatat dan meng
 
 ## Info
 
-Aplikasi ini mungkin akan saya perbarui jika saya ada waktu melakukan nya. Teirma kasih.
+Aplikasi ini mungkin akan saya perbarui jika saya ada waktu melakukan nya. Terima kasih.
