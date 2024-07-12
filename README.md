@@ -2,7 +2,7 @@
 
 Aplikasi TodoList sederhana yang memungkinkan pengguna untuk mencatat dan mengelola daftar tugas atau catatan sehari-hari. Dengan antarmuka yang bersih dan minimalis, pengguna dapat dengan mudah menambahkan dan menghapus. Aplikasi ini juga mendukung penggunaan offline melalui penggunaan Progressive Web App (PWA), sehingga dapat di install melalui perangkat smartphone, desktop, kapan saja, bahkan tanpa koneksi internet.
 
-## Screenshot
+## Screenshots
 
 ![image](https://github.com/user-attachments/assets/052f8dc7-bdee-4209-b842-54d543c2d139)
 
