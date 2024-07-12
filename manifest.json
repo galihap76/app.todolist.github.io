@@ -1,6 +1,6 @@
 {
   "name": "TodoList App",
-  "short_name": "ToDo",
+  "short_name": "TodoList App",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",

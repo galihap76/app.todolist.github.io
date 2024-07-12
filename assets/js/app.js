@@ -1,34 +1,73 @@
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("/assets/js/service-worker.js")
-      .then((registration) => {
-        console.log("ServiceWorker registered with scope:", registration.scope);
-      })
-      .catch((error) => {
-        console.log("ServiceWorker registration failed:", error);
-      });
-  });
-}
+let addTodo = document.querySelector("#addTodo");
+let count = 0;
 
-document.getElementById("add-todo").addEventListener("click", () => {
-  const newTodo = document.getElementById("new-todo").value;
-  if (newTodo) {
-    addTodoToList(newTodo);
-    document.getElementById("new-todo").value = "";
+addTodo.addEventListener("click", () => {
+  const newTodo = document.getElementById("task");
+
+  if (newTodo.value === "") {
+    newTodo.classList.add("is-invalid");
+  } else {
+    newTodo.classList.remove("is-invalid");
+    addTodoToList(newTodo.value);
+    newTodo.value = "";
+    count++;
   }
 });
 
 function addTodoToList(todo) {
   const todoList = document.getElementById("todo-list");
+  const hr = document.querySelector(".hr");
   const li = document.createElement("li");
-  li.textContent = todo;
+  li.classList.add(
+    "list-group-item",
+    "d-flex",
+    "justify-content-between",
+    "align-items-center",
+    "count-li"
+  );
+
+  hr.innerHTML = "<hr/>";
+
+  const taskText = document.createElement("span");
+  taskText.textContent = todo;
+
+  const buttonGroup = document.createElement("div");
+
   const deleteButton = document.createElement("button");
-  deleteButton.textContent = "Delete";
-  deleteButton.classList.add("delete");
+  const updateButton = document.createElement("button");
+  const trashIcon = document.createElement("i");
+  const pencilIcon = document.createElement("i");
+
+  deleteButton.textContent = " Delete ";
+  deleteButton.classList.add("btn", "btn-danger", "ms-2");
+  trashIcon.classList.add("bi", "bi-trash-fill");
+  deleteButton.appendChild(trashIcon);
+
+  updateButton.textContent = " Update ";
+  updateButton.classList.add("btn", "btn-warning", "text-white");
+  pencilIcon.classList.add("bi", "bi-pencil-fill");
+  updateButton.appendChild(pencilIcon);
+
+  buttonGroup.appendChild(updateButton);
+  buttonGroup.appendChild(deleteButton);
+
+  li.appendChild(taskText);
+  li.appendChild(buttonGroup);
+  todoList.appendChild(li);
+
   deleteButton.addEventListener("click", () => {
     todoList.removeChild(li);
+    count--;
+
+    if (count == 0) {
+      hr.innerHTML = "";
+    }
   });
-  li.appendChild(deleteButton);
-  todoList.appendChild(li);
+
+  updateButton.addEventListener("click", () => {
+    const newTask = prompt("Update task: ", taskText.textContent);
+    if (newTask !== null && newTask !== "") {
+      taskText.textContent = newTask;
+    }
+  });
 }
